@@ -1,0 +1,24 @@
+Chess Robot
+
+===== Overview =====
+- In this project, I will create an Arduino Nano-driven robot arm that can play chess against a human on arbitrarily-sized chess boards (within reason)
+- The robot arm will be calibrated to the bounds of the chess board and will only do two things: pick pieces up and put pieces down
+- Moves played by the robot will be calculated using a chess engine, either one I create on my own or Stockfish (probably the latter)
+- Turn-based protocol where the human player performs a move and sends it to the board in some kind of (source, destination) format
+
+===== Materials =====
+- ...
+
+===== Robot Arm Vision =====
+- The robot arm will be functionally equivalent to a human arm
+- 2 servo motors for pivoting and extension (shoulder joint)
+- 1 servo motor for centering (elbow joint)
+- 1 servo motor for fine-tuning (wrist joint)
+- 1 servo motor for gripper control
+- These servos will be controlled via PWM and an external power supply
+- This arm will in theory be able to move pieces between any of the tiles on the board, so long as the board is not massive
+
+===== Converting Tile Position to World Position =====
+- The robot arm will have one primary input: the move to perform given by the chess engine
+- A calibration stage will take place upon the Arduino's reset, setting some anchor points on the chess board, so the arm knows where each tile is
+- For the pivoting servo, the rotation is the angle between the lettered side of the board closest to the arm and the servo's horn created by the line intersecting the center of the tile and the horn
