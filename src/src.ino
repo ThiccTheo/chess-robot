@@ -3,16 +3,21 @@
 
 #include <Servo.h>
 
-Servo servo;
+Servo shoulderPivot;
+Servo shoulderHinge;
+Servo elbowHinge;
+Servo wristHinge;
 
 void setup() {
-	servo.attach(9);
+	shoulderPivot.attach(9);
+	shoulderHinge.attach(10);
 }
 
 void loop() {
-	if (digitalRead(2) == HIGH) {
-		servo.write(180);
-	} else {
-		servo.write(0);
-	}
+	shoulderPivot.write(0);
+	shoulderHinge.write(0);
+	delay(3000);
+	shoulderPivot.write(180);
+	shoulderHinge.write(180);
+	delay(3000);
 }
