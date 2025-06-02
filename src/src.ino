@@ -13,8 +13,7 @@ Servo gripper;
 const bool ROBOT_COLOR = 0;
 
 float baseAngle(char file, int rank) {
-	int _file = file - 96; 
-	float squareX = (ROBOT_COLOR == 0 ? 1 : -1) * (_file - 4.5);
+	float squareX = (ROBOT_COLOR == 0 ? 1 : -1) * (file - 96 - 4.5);
 	float squareY = (ROBOT_COLOR == 0 ? rank : 9 - rank) - 0.5;
 	return atan2(squareY, squareX);
 }
