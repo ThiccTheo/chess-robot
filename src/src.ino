@@ -19,36 +19,22 @@ float baseAngle(char file, int rank) {
 }
 
 void setup() {
-	base.attach(9);
+	base.attach(12);
+	shoulder.attach(11);
+	elbow.attach(10);
 }
 
 void loop() {
-	base.write(degrees(baseAngle('a', 1)));
-	delay(2000);
-	base.write(degrees(baseAngle('b', 2)));
-	delay(2000);
-	base.write(degrees(baseAngle('c', 3)));
-	delay(2000);
-	base.write(degrees(baseAngle('d', 4)));
-	delay(2000);
-	base.write(degrees(baseAngle('e', 5)));
-	delay(2000);
-	base.write(degrees(baseAngle('f', 6)));
-	delay(2000);
-	base.write(degrees(baseAngle('g', 7)));
-	delay(2000);
-	base.write(degrees(baseAngle('h', 8)));
-	delay(2000);
-	base.write(degrees(baseAngle('g', 7)));
-	delay(2000);
-	base.write(degrees(baseAngle('f', 6)));
-	delay(2000);
-	base.write(degrees(baseAngle('e', 5)));
-	delay(2000);
-	base.write(degrees(baseAngle('d', 4)));
-	delay(2000);
-	base.write(degrees(baseAngle('c', 3)));
-	delay(2000);
-	base.write(degrees(baseAngle('b', 2)));
-	delay(2000);
+	shoulder.write(0);
+	delay(1000);
+	base.write(0);
+	delay(1000);
+	elbow.write(0);
+	delay(1000);
+	shoulder.write(90);
+	delay(1000);
+	base.write(180);
+	delay(1000);
+	elbow.write(90);
+	delay(1000);
 }
