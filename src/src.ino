@@ -25,16 +25,4 @@ void setup() {
 }
 
 void loop() {
-	shoulder.write(0);
-	delay(1000);
-	base.write(0);
-	delay(1000);
-	elbow.write(0);
-	delay(1000);
-	shoulder.write(90);
-	delay(1000);
-	base.write(180);
-	delay(1000);
-	elbow.write(90);
-	delay(1000);
 }
