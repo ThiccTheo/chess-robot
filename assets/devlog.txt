@@ -1,0 +1,12 @@
+===== 6/6 =====
+- First day writing in the devlog. I made progress beforehand but only now am I journaling. Code to rotate base servo in direction of desired tile is completed.
+- Attempted to create my first mechanical prototype of the robot arm. I'm using popsicle sticks and tape, though I need a stronger binder to handle the torque due to the weight of the servos on the arm itself. I think screws have to be used.
+- Tried use all three servos at the same time, but noticed the servos were unresponsive and didn't complete their rotations on schedule. Since I don't have a battery pack or anything with more amperage, I will just use the power supply module with barrel jack and only move one arm at a time (this draws much less current). The breadboard power supply modules can supply up to 750 mA which is right above the stall current of one servo, so in theory, moving only one servo at a time means I have all the power I need.
+- Tomorrow, I will disassemble the prototype and try to find screws that I can drill directly into the holes on the servo horns. I might go back to hobby lobby and buy some 18-gague wire to thread into the servo horn holes; I'm pretty sure its stronger and lighter than tape.
+
+===== 6/22 =====
+- Construction of robot arm without gripper completed.
+- Movement is alright, but I would like to add a gripper using two servos, an oval piece of wood, and a compliant gripper mechanism that uses a string to tighten a piece of plastic.
+- There are slight inaccuracies with the default angles the servo is set to, so I will need to calibrate the arm properly once the gripper is in place.
+- Current doesn't seem to be an issue, and I won't need any extra breadboard connections besides the additional two servos.
+- Torque due to the weight of the arm is high, but the motors are able to handle it. I don't imagine the extra two servos and little bit of wood will add too much weight or lever arm length.

@@ -16,7 +16,7 @@ float base_angle(char file, int rank) {
 void set_rotation(Servo* servo, int angle) {
 	while (servo->read() != angle) { 
 		servo->write(servo->read() + (angle - servo->read() > 0) - (angle - servo->read() < 0));
-		delay(100);
+		delay(25);
 	}
 }
 
@@ -31,10 +31,17 @@ void setup() {
 
 void loop() {
 	set_rotation(&base, 180);
+	delay(3000);
 	set_rotation(&base, 90);
+	delay(3000);
 	set_rotation(&shoulder, 45);
+	delay(3000);
 	set_rotation(&elbow, 90);
+	delay(3000);
 	set_rotation(&elbow, 0);
+	delay(3000);
 	set_rotation(&shoulder, 0);
+	delay(3000);
 	set_rotation(&base, 0);
+	delay(3000);
 }
